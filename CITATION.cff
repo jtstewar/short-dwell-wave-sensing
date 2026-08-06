@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Short-Dwell Aerial Wave Sensing over Coastal Waters — code and data release"
+authors:
+  - family-names: Stewart
+    given-names: James
+    affiliation: "Systems Design Engineering, University of Waterloo"
+  - family-names: Zelek
+    given-names: John
+    affiliation: "Systems Design Engineering, University of Waterloo"
+preferred-citation:
+  type: conference-paper
+  title: "Short-Dwell Aerial Wave Sensing over Coastal Waters: Feasibility, Observability, and Failure Modes"
+  authors:
+    - family-names: Stewart
+      given-names: James
+    - family-names: Zelek
+      given-names: John
+  collection-title: "ECCV 2026 Workshops (2nd Workshop on Marine Vision)"
+  year: 2026

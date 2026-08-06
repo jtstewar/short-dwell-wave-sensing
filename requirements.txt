@@ -1,0 +1,9 @@
+# Pinned to the environment that produced the paper's committed numbers.
+# ffmpeg must be on PATH for video extraction (tested with ffmpeg 6.1).
+numpy==2.5.1
+scipy==1.16.3
+matplotlib==3.10.7
+opencv-python==5.0.0.93
+# only for scripts/process_hovers_0701.py (chart consistency columns):
+rasterio==1.5.0
+pyproj==3.7.2

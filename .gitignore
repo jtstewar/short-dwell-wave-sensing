@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/flights/*
+!data/flights/.gitkeep
+figs/*
+!figs/.gitkeep
+mvdr_perwindow.csv
+fft_perwindow.csv
