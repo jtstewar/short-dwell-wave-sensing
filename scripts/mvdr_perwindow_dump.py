@@ -60,11 +60,17 @@ def argmax_U(P, kk, km, depth, vmax=6.0):
                 if s_ > bs: bs, best = s_, U
     return best
 
-out = open("mvdr_perwindow.csv", "w", newline="")   # compare against supp/mvdr_perwindow.csv
-wr = csv.writer(out)
-wr.writerow(["flight", "t0_s", "dur_s", "alt_m", "truth_vx", "truth_vy",
-             "est_vx", "est_vy", "err_ms"])
-for KEY, TELG, OFF, T0S, T1S in SECTIONS:
+def main():
+    out = open("mvdr_perwindow.csv", "w", newline="")   # compare against supp/mvdr_perwindow.csv
+    wr = csv.writer(out)
+    wr.writerow(["flight", "t0_s", "dur_s", "alt_m", "truth_vx", "truth_vy",
+                 "est_vx", "est_vy", "err_ms"])
+    run_sections(wr)
+    out.close()
+    print("CSV written")
+
+def run_sections(wr):
+  for KEY, TELG, OFF, T0S, T1S in SECTIONS:
     tel = list(csv.DictReader(open(glob.glob(f"captures/telemetry_0701/{TELG}.csv")[0])))
     def col(k):
         o = []
@@ -108,5 +114,6 @@ for KEY, TELG, OFF, T0S, T1S in SECTIONS:
                          f"{v_r[0]:.3f}", f"{v_r[1]:.3f}", f"{U[0]:.3f}",
                          f"{U[1]:.3f}", f"{np.hypot(*(U-v_r)):.3f}"])
         print(f"{KEY}@{T0:.0f} done", flush=True)
-out.close()
-print("CSV written")
+
+if __name__ == "__main__":
+    main()
