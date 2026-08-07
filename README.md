@@ -100,8 +100,10 @@ versions, so use the pins when comparing against the committed CSVs.
 - **Committed derivatives** (everything the statistics and most figures need): the
   per-window error CSVs (`supp/`), hover fit tables, crawl-transect depth tables, and
   the hover worklist with window boundaries and GNSS positions (`captures/`).
-- **Raw video** (~36 GB) is not hosted here — available from the authors on request
-  (an archived deposit is planned).
+- **Raw video** (~28 GB privacy-masked, analysis windows bit-identical to the camera
+  originals) is not hosted here — an archived deposit is being prepared; `deposit/`
+  documents the masking and its verification. Until the DOI lands, available from
+  the authors on request.
 - **Bathymetry rasters** in `data/rasters/` are small clips of public datasets used
   as consistency checks only (the sites have no independent surf-zone depth truth;
   that gap is part of the paper's point): NONNA-10 (Canadian Hydrographic Service,
